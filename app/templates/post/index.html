@@ -1,7 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block title %}My Twitter{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+
 <form method="POST" action=".">
+    
     {% csrf_token %}
+    
+    <input type="text" name="content" />
 
-    <input type="text" name="content"><br>
+    <br><br>
 
-    <button>Submit</button>
+    <button type="submit">Submit</button>
+
+
 </form>
+</div>
+
+{% endblock %}
